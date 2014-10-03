@@ -38,6 +38,16 @@
 		.draft.note p:last-child {
 			margin-bottom: 0;
 		}
+		mark:after {
+			position:absolute;
+			left:0;
+			height:1em;
+			line-height: 1em;
+			min-width:1em;
+			background-color: red;
+			content: attr(title);
+			color: #fff;
+		}
 	</style>
 
 	<!-- When moving to live environment this needs to move to wai-main.css -->
@@ -198,7 +208,7 @@
 					<p>This document is for project managers, project team leaders, website owners and managers, web developers, and small business owners. It is likely that you will be relatively new to accessibility or new to managing accessibility projects.</p>
 					<p>If you are new to accessibility these related resources may help your general understanding of the topic:</p>
 					<ul>
-				    <li><a href="/standards/webdesign/accessibility">W3C - Accessibility</a> - The place to start for a short introduction to Web accessibility.</li>
+				    <li><a href="/standards/webdesign/accessibility">W3C - Accessibility</a> – The place to start for a short introduction to Web accessibility.</li>
 				    <li><a href="/WAI/intro/components.php">Essential Components of Web Accessibility</a> - Shows how web accessibility depends on several components of web development and interaction working together and the relationship between the WAI guidelines.</li>
 				    <li><a href="/WAI/intro/people-use-web/">How People with Disabilities Use the Web</a> -  Examples of people with different disabilities using websites, applications, browsers, and authoring tools.</li>
 						<li><a href="/WAI/bcase/Overview">Developing a Web Accessibility Business Case</a> - Presents benefits and costs of Web accessibility and includes guidance on incorporating these aspects into a specific organization's business case.						</li>
@@ -217,24 +227,24 @@
 				<p>Note that additional content regarding each Key Action can be revealed using the button beside the action. You can expand all such content using the following buttons.</p>
 				<div class="f_controls_accordion f_fileToLoad_accordionControls"></div>
 
-				<p class="totop"><a href="#contents">back to page contents</a></p>		
+				<p class="totop"><a href="#contents">back to page contents</a></p>
 
 
 				<h2 id="scope">Determine Scope and Target</h2>
 				<p>The motivations and pressures for your improvement project will likely influence your scope and target. For example, if customer feedback on your website suggests an accessibility barrier that prevents use, then you probably want to fix that first. Similarly, if you are legally required to meet a certain level of accessibility, then your target will be at least that level.</p>
-				<p>Your scope may be confined to a specific barrier, for example poor color contrast in your main content. Even with this restricted scope you might take the opportunity to address other identified issues in related areas of the website. For example, while addressing color contrast in the <abbr title="Cascading Style Sheets">CSS</abbr> you might also fix keyboard focus styling of links in the same <abbr title="Cascading Style Sheets">CSS</abbr>.</p>
+				<p>Your scope may be confined to a specific barrier, for example poor <mark title="not contrast ratio?">color contrast</mark> in your main content. Even with this restricted scope you might take the opportunity to address other identified issues in related areas of the website. For example, while addressing <mark>color contrast</mark> in the <mark title="seems oddly specific"><abbr title="Cascading Style Sheets">CSS</abbr> you might also fix keyboard focus styling of links in the same <abbr title="Cascading Style Sheets">CSS</abbr> [[I don’t expect small business owners to understand this. Do they need to?]]</mark>.</p>
 				<p>By specifying what websites or pages are to be assessed and to what standard you will be able to limit the scope to something that is achievable. If you have limited resources then there is the opportunity to define a multi-tiered target with different dates for different areas of the website or conformance levels.</p>
 
 				<h3>Key actions</h3>
 				<ul class="key-actions">
 					<li><span class="f_panelHead">Set a standard and conformance level.</span>
 						<div>
-							<p>Most organizations use <a href="/TR/WCAG20/"><abbr title="Web Content Accessibility Guidelines">WCAG</abbr></a> as a target for accessibility and specify what level of success criteria they aim to meet. Your organization may already have an accessibility policy that specifies what standard and level you need to achieve.</p>
+							<p>Most organizations use <mark title="very sudden"><a href="/TR/WCAG20/"><abbr title="Web Content Accessibility Guidelines">WCAG</abbr></a></mark> as a target for accessibility and specify what level of success criteria they aim to meet. Your organization may already have an accessibility policy that specifies what standard and level you need to achieve.</p>
 						</div>
 					</li>
 					<li><span class="f_panelHead">Define what is to be evaluated.</span>
 						<div>
-							<p>Your project may be a single website or a part of a larger site. You will need to carefully consider your timescales and available resources when determining the scope. Where you initially have limited resources focusing on key user journeys and pages may bring the most significant benefits.</p>
+							<p>Your project may be a single website or a part of a larger site. You will need to carefully consider your timescales and available resources when determining the scope. Where you <mark title="in practice, that is always ;)">initially have limited resources</mark> focusing on key user journeys and pages may bring the most significant benefits.</p>
 						</div>
 					</li>
 				</ul>
@@ -245,11 +255,11 @@
 					<li><a href="pol.html">Developing Organizational Policies</a> - Describes considerations when making simple or comprehensive policies for organizations.</li>
 				</ul>
 
-				<p class="totop"><a href="#contents">back to page contents</a></p>		
+				<p class="totop"><a href="#contents">back to page contents</a></p>
 
 
 			  <h2 id="assess">Assess the Situation</h2>
-				<p>The goal of assessing your website or pages is to identify the accessibility barriers and gather information in order to plan for their repair. Evaluation can focus on specific points to help guide your planning, such as determining if a particular issue is widespread or isolated, or what the impact is on users with disabilities. Your target will define what you need to evaluate against, although it is sometimes beneficial to evaluate to a higher standard. There are likely some higher level criteria that you will be able to easily achieve.</p>
+				<p>The goal of assessing your website or <ins>individual</ins> pages is to identify the accessibility barriers and gather information in order to plan for their <mark title="improvement?">repair [[I have the feeling that this can be read ass “only fix what is broken”, instead of “what doesn’t work well”.]]</mark>. Evaluation can focus on specific points to help guide your planning, such as determining if a particular issue is widespread or isolated, or what the impact is on users with disabilities. Your target will define what you need to evaluate against, although it is sometimes beneficial to evaluate to a higher standard. There are likely some higher level criteria that you will be able to easily achieve.</p>
 				<p>Rather than thoroughly evaluating every target page, you can focus on representative areas in order to obtain more valuable information with less effort. For example, templates, style sheets, and any shared components, such as navigation bars and footers, only need to be evaluated once.</p>
 				<p>Knowing where identified issues originate can help in your planning. For example, if only a few data tables are missing necessary markup, then you might include adding table markup to quality assurance processes. However, if none of the tables are properly marked up, you would consider additional training on data table markup. If tables from one development team are done properly, but another teams are not, this helps further clarify where education is needed.</p>
 				<p>Many organizations hire accessibility specialists to evaluate their website. They will also be able to provide guidance on how to respond to the identified barriers. This can include general recommendations on approach and priorities, specific recommendations on solutions, and guidance on the knowledge and skills needed for the repairs.</p>
@@ -268,7 +278,7 @@
 					</li>
 					<li><span class="f_panelHead">Evaluate with real users.</span>
 						<div>
-							<p>In addition to helping identify and prioritize accessibility barriers, watching people struggle to use your site can be a powerful motivator for your improvement project team.</p>
+							<p>In addition to helping identify and prioritize accessibility barriers, <mark>watching people struggle to use your site can be a powerful motivator</mark> for your improvement project team.</p>
 						</div>
 					</li>
 					<li><span class="f_panelHead">Use appropriate evaluation and repair tools.</span>
@@ -283,7 +293,7 @@
 						    <li>Configuring your tools, for example, sometimes accessibility features in authoring tools are disabled by default and need to be turned on.</li>
 						    <li>Using plug-ins or other add-on software to extend the accessibility support of your tools.</li>
 						    <li>Upgrading your existing tools to the latest version, if they have better accessibility support.</li>
-						    <li>Purchasing different tools with better accessibility support.</li>
+						    <li><mark title="selecting?">Purchasing</mark> different tools with better accessibility support.</li>
 
 							</ul>
 							<p>For some content, such as video or <abbr title="Portable Document Format">PDF</abbr>, there may be an involved creation process with a number of tools involved. Consider each step of the process to identify where issues are introduced and where they may be best addressed.</p>
@@ -299,7 +309,7 @@
 					<li><a href="/WAI/eval/selectingtools">Selecting Web Accessibility Evaluation Tools</a> - Guidance on choosing which Web accessibility evaluation tools to use to help evaluate Web accessibility.</li>
 				</ul>
 
-				<p class="totop"><a href="#contents">back to page contents</a></p>		
+				<p class="totop"><a href="#contents">back to page contents</a></p>
 
 
 			  <h2 id="prioritize">Prioritize Solutions</h2>
@@ -307,10 +317,10 @@
 				<ol>
 					<li><h4>What is the impact on people with disabilities?</h4>
 						<p>Accessibility barriers are often identified by WCAG success criteria. Each criteria has a Level (A, AA, AAA) that helps determine the impact of a particular accessibility barrier. The actual impact depends on the context of the barrier and target audience. For example, poor contrast in the main content has a high impact, whereas in generic footers it may have low impact.</p>
-						<p>Evaluating with users will also help determine the impact of accessibility any barriers.</p>
+						<p>Evaluating with users will also help determine the impact of <ins>any</ins> accessibility <del>any</del> barriers.</p>
 					</li>
 					<li><h4>What is the effort required for repair?</h4>
-						<p>The time, cost, and skills to repair a barrier will vary greatly. For example, repairing an issue in the footer could require a simple change to a template that is automatically propagated throughout the website, or it could require changing every page manually.</p>
+						<p>The time, cost, and skills to <mark title="isn’t that the opposite of what we want?">repair a barrier</mark> will vary greatly. For example, repairing an issue in the footer could require a simple change to a template that is automatically propagated throughout the website, or it could require changing every page manually.</p>
 						<p>Running workshops with representatives from all teams can help you quickly determine possible solutions and what effort would be required to implement them. Ensure that whoever is responsible for implementing the solutions is part of any discussion as they will know best what constraints exist.</p>
 					</li>
 				</ol>
@@ -334,7 +344,7 @@
 					<li><a href="/WAI/intro/people-use-web/Overview">How People with Disabilities Use the Web</a> - Provides examples of how people with disabilities use the web, which can be helpful when prioritizing issues.</li>
 				</ul>
 
-				<p class="totop"><a href="#contents">back to page contents</a></p>		
+				<p class="totop"><a href="#contents">back to page contents</a></p>
 
 
 			  <h2 id="repair">Implement Repairs</h2>
@@ -360,13 +370,13 @@
 					</li>
 				</ul>
 
-				<p class="totop"><a href="#contents">back to page contents</a></p>		
+				<p class="totop"><a href="#contents">back to page contents</a></p>
 
 
 			  <h2 id="revisit">Review and Plan to Revisit</h2>
 				<p>Once repairs are completed, it is helpful to review what has been achieved and what is still left to do. Knowing what problems still exist will help planning ongoing maintenance. It may also be necessary to communicate known issues to your site visitors especially where you are able to provide suitable alternative approaches.</p>
 				<p>Continue to evaluate accessibility in updated pages to ensure that new barriers are not introduced. This may require new or improved quality assurance stages in your web content production process. See the <a href="/WAI/eval/considerations#ongoing">Ongoing monitoring</a> section of the Evaluation Approaches for Specific Contexts document.</p>
-				
+
 
 				<h3>Key actions</h3>
 				<ul class="key-actions">
@@ -397,7 +407,7 @@
 
 			  <h2 id="strategic">Next steps: Strategic Planning</h2>
 				<p>Thinking about accessibility tactically will generally be less cost effective and efficient that considering it as an integral part of your web development strategies. There are several things you can do to help your organization create more accessible websites as standard.</p>
-				
+
 				<ul>
 			    <li><a href="/WAI/impl/Overview">Implementing Web Accessibility Across Organizations and Projects</a> outlines how to integrate accessibility throughout your web development. Ensure that when redesigns or updates are planned, accessibility in included from the start of the project. Accessibility is much less costly and time-consuming when implemented from the beginning of a project, rather than the end.</li>
 			    <li>Ensure that you have an effective accessibility policy in place that specifies that your website meet or exceed legal requirements.</li>
